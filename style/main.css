@@ -1,0 +1,9 @@
+h1{
+	color:red;
+	background: url('../img/1.jpg');
+}
+.root {
+  background-color: #eee;
+  padding: 10px;
+  border: 3px solid #ccc;
+}

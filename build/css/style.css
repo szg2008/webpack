@@ -1,0 +1,10 @@
+/*! Copyright suzg inc. */
+h1{
+	color:red;
+	background: url(/build/44d2a976956a9393a6201021585d3e6a.jpg);
+}
+.root {
+  background-color: #eee;
+  padding: 10px;
+  border: 3px solid #ccc;
+}
