@@ -21,8 +21,9 @@ module.exports = {
 	//输出的文件名 合并之后会命名为bundle.js
 	output:{
 		path: BUILD_PATH,
-		filename:'[name].[hash].js',//加上hash值防止缓存
-		publicPath:'/build/'
+		filename:'[name].[chunkhash:8].js',//加上hash值防止缓存
+		publicPath:'/build/',
+		chunkFilename:'[name].[chunkhash:8].js'//设置异步加载的文件的名称
 	},
 	module:{
 		//处理各种类型的文件
@@ -89,14 +90,22 @@ module.exports = {
 		    //chunks这个参数告诉插件要引用entry里面的哪几个入口
 		    chunks: ['app', 'vendors'],
 		    //要把script插入到标签里
-		    inject: 'body'
+		    inject: 'body',
+		    minify:{//压缩HTML文件
+		    	removeComments:false,//移除里面的注释
+		    	collapseWhitespace:true//移除里面的空白行和换行符
+		    }
 		 }),
 		 new HtmlwebpackPlugin({
 		    title: 'Hello Mobile app',
 		    template: path.resolve(TEM_PATH, 'mobile.html'),
 		    filename: 'mobile.html',
 		    chunks: ['mobile', 'vendors'],
-		    inject: 'body'
+		    inject: 'body',
+		    minify:{//压缩HTML文件
+		    	removeComments:false,//移除里面的注释
+		    	collapseWhitespace:true//移除里面的空白行和换行符
+		    }
 		 }),
     	//加载第三方库，比如jquery的第三方插件
     	//通过ProvidePlugin，把一个全局变量插入到所有的代码中
@@ -111,7 +120,8 @@ module.exports = {
     	// //把入口文件里面的数组打包成vendors.js
     	new webpack.optimize.CommonsChunkPlugin({name:'vendors',filename:'vendors.js'}),
     	new webpack.BannerPlugin("Copyright suzg inc."),//在这个数组中new一个就可以了
-    	new ExtractTextPlugin('./css/style.css')
+    	new ExtractTextPlugin('./css/style.[contenthash:8].css')
+    	//new webpack.HotModuleReplacementPlugin()
   	],
   	//一些基本的配置
   	resolve:{

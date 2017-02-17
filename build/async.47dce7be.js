@@ -1,0 +1,5 @@
+/*! Copyright suzg inc. */
+webpackJsonp([0],{4:/*!**********************!*\
+  !*** ./app/async.js ***!
+  \**********************/
+function(module,exports){eval("function async() {\r\n\tsetTimeout(function(){\r\n\t\tvar element = document.createElement('p');\r\n\t\telement.innerHTML = 'Hello async';\r\n\t\tdocument.body.appendChild(element);\r\n\t},2000);\r\n}\r\nmodule.exports = async;//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiNC5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2FwcC9hc3luYy5qcz9iMjFiIl0sInNvdXJjZXNDb250ZW50IjpbImZ1bmN0aW9uIGFzeW5jKCkge1xyXG5cdHNldFRpbWVvdXQoZnVuY3Rpb24oKXtcclxuXHRcdHZhciBlbGVtZW50ID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgncCcpO1xyXG5cdFx0ZWxlbWVudC5pbm5lckhUTUwgPSAnSGVsbG8gYXN5bmMnO1xyXG5cdFx0ZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChlbGVtZW50KTtcclxuXHR9LDIwMDApO1xyXG59XHJcbm1vZHVsZS5leHBvcnRzID0gYXN5bmM7XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9hcHAvYXN5bmMuanNcbi8vIG1vZHVsZSBpZCA9IDRcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9")}});

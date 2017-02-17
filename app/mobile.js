@@ -8,3 +8,4 @@ $(document).ready(function(){
 	document.body.appendChild(app);
 	$('h1').greenify();
 });
+
