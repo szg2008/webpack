@@ -29,7 +29,7 @@ module.exports = {
 		//处理各种类型的文件
 		loaders:[
 			{
-				test:/\.css$/, 
+				test:/\.css$/,
 				loader: ExtractTextPlugin.extract({ fallbackLoader: 'style-loader', loader: 'css-loader' })
 				//loader:"style-loader!css-loader?modules"//处理css文件,同样可以处理sass文件,不同的loader之间使用!隔开
 			},
